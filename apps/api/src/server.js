@@ -1,6 +1,16 @@
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { existsSync, readFileSync } from 'node:fs';
 import { serve } from '@hono/node-server';
+import { serveStatic } from '@hono/node-server/serve-static';
 import { Hono } from 'hono';
 import { pool } from './db.js';
+
+const here = dirname(fileURLToPath(import.meta.url));
+const staticRoot = resolve(here, '../../../dist/apps/web');
+const indexHtmlPath = join(staticRoot, 'index.html');
+const hasStaticBuild = existsSync(indexHtmlPath);
+const indexHtml = hasStaticBuild ? readFileSync(indexHtmlPath, 'utf-8') : null;
 
 const app = new Hono();
 
@@ -85,6 +95,20 @@ app.post('/api/leads', async (c) => {
 app.onError((err, c) => {
   console.error('[api] error:', err);
   return c.json({ error: 'Internal server error' }, 500);
+});
+
+if (hasStaticBuild) {
+  app.use('*', serveStatic({ root: staticRoot }));
+  console.log(`[api] serving static frontend from ${staticRoot}`);
+} else {
+  console.log('[api] no static build found; running API-only (use Vite dev server for the frontend)');
+}
+
+app.notFound((c) => {
+  if (hasStaticBuild && c.req.method === 'GET' && !c.req.path.startsWith('/api/')) {
+    return c.html(indexHtml);
+  }
+  return c.json({ error: 'Not found' }, 404);
 });
 
 const port = Number(process.env.PORT) || 8787;
