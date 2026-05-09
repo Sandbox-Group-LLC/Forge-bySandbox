@@ -304,6 +304,12 @@ export default defineConfig({
 			'.app-preview.com',
 			'.app-preview.io',
 		],
+		proxy: {
+			'/api': {
+				target: process.env.API_URL || 'http://localhost:8787',
+				changeOrigin: true,
+			},
+		},
 		fs: {
 			strict: true,
 			allow: [

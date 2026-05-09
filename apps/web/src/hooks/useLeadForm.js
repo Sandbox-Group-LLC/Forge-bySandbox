@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import pb from '@/lib/pocketbaseClient.js';
+import { createLead } from '@/lib/leadsApi.js';
 
 export const useLeadForm = () => {
   const [formData, setFormData] = useState({
@@ -81,7 +81,7 @@ export const useLeadForm = () => {
     setIsLoading(true);
 
     try {
-      await pb.collection('leads').create(formData, { $autoCancel: false });
+      await createLead(formData);
       setIsSubmitted(true);
       setFormData({
         firstName: '',
