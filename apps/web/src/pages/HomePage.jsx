@@ -12,11 +12,21 @@ const HomePage = () => {
   return (
     <>
       <Helmet>
-        <title>Forge - Bespoke Operational Software for Growth Teams</title>
-        <meta 
-          name="description" 
-          content="Forge is a product engineering arm building custom operational software, CRM-integrated applications, and internal infrastructure for growth teams." 
+        <title>Forge by Sandbox — Bespoke Operational Software for Growth Teams</title>
+        <meta
+          name="description"
+          content="Forge builds production-ready custom software for growth teams: CRM extensions, workflow automation, operational dashboards, and event check-in systems. You own the code, data, and infrastructure."
         />
+        <link rel="canonical" href="https://forge-bysandbox.tech/" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://forge-bysandbox.tech/" />
+        <meta property="og:title" content="Forge by Sandbox — Bespoke Operational Software for Growth Teams" />
+        <meta property="og:description" content="Production-ready CRM extensions, workflow automation, dashboards, and event tooling. Delivered with full ownership." />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Forge by Sandbox — Bespoke Operational Software for Growth Teams" />
+        <meta name="twitter:description" content="Production-ready CRM extensions, workflow automation, dashboards, and event tooling. Delivered with full ownership." />
       </Helmet>
       <div className="min-h-screen bg-white">
         <Header />
