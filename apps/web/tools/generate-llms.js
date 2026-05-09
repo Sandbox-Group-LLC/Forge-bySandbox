@@ -125,7 +125,42 @@ function generateLlmsTxt(pages) {
 		`- [${page.title}](${page.url}): ${page.description}`
 	).join('\n');
 
-	return `## Pages\n${pageEntries}`;
+	return `# Forge by Sandbox
+
+> Forge by Sandbox is a product engineering studio that builds bespoke operational software for growth-focused organizations. Forge delivers production-ready CRM extensions, workflow automation engines, operational dashboards, and event check-in systems. Clients receive full ownership of the application, the data, and the infrastructure on delivery.
+
+## About
+
+Forge is part of Sandbox Group LLC. Every engagement is scoped, built, and transferred so the client retains complete ownership of the source code, data, and deployment environment. Post-launch support is available.
+
+## Capabilities
+
+- **CRM Extensions & Integrations** — Tools that connect, enrich, and automate CRM operations.
+- **Operational Dashboards & Internal Apps** — Real-time UI for business operations, owner-controlled and maintainable.
+- **Workflow Automation Engines** — Systems that eliminate manual work and sync across platforms.
+- **Event & Check-In Systems** — Lightweight operational tooling for live experiences.
+
+## Engagement Flow
+
+1. **Discovery** — Technical scoping, architecture planning, and definition of deliverables.
+2. **Build** — Focused product engineering with progress check-ins and staging access.
+3. **Deploy** — Implementation into the client's infrastructure.
+4. **Handoff** — Full source code, documentation, and optional ongoing support.
+
+## Productized Packages
+
+- **Forge Launchpad** ($4,500, 7-day delivery) — Professional brand website with domain, hosting, custom 3–5 page design, mobile optimization, and launch.
+- **Forge Rapid Launch** ($2,500, 3–4 day delivery) — Single-page brand site with domain, hosting, mobile-optimized custom design, and launch.
+
+## Contact
+
+- Email: admin@makemysandbox.com
+- Website: https://forge-bysandbox.tech/
+
+## Pages
+
+${pageEntries}
+`;
 }
 
 function ensureDirectoryExists(dirPath) {
