@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
         <div className="border-t border-white/20 pt-8">
           <p className="text-sm text-neutral-light text-center">
-            © 2025 Forge by Sandbox (part of Sandbox Group LLC). All rights reserved.
+            © 2026 Forge by Sandbox (part of Sandbox Group LLC). All rights reserved.
           </p>
         </div>
       </div>
