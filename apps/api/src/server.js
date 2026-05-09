@@ -1,9 +1,11 @@
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { existsSync, readFileSync } from 'node:fs';
+import { timingSafeEqual } from 'node:crypto';
 import { serve } from '@hono/node-server';
 import { serveStatic } from '@hono/node-server/serve-static';
 import { Hono } from 'hono';
+import { bodyLimit } from 'hono/body-limit';
 import { pool } from './db.js';
 
 const here = dirname(fileURLToPath(import.meta.url));
@@ -91,6 +93,41 @@ app.post('/api/leads', async (c) => {
 
   return c.json(rows[0], 201);
 });
+
+function checkAdminPassword(supplied) {
+  const expected = process.env.ADMIN_PASSWORD;
+  if (!expected) return false;
+  const a = Buffer.from(String(supplied ?? ''));
+  const b = Buffer.from(expected);
+  if (a.length !== b.length) return false;
+  return timingSafeEqual(a, b);
+}
+
+app.post(
+  '/api/admin/relay',
+  bodyLimit({ maxSize: 500 * 1024, onError: (c) => c.json({ success: false, error: 'Body too large' }, 413) }),
+  async (c) => {
+    if (!process.env.ADMIN_PASSWORD) {
+      return c.json({ success: false, error: 'Relay disabled' }, 503);
+    }
+    let body;
+    try { body = await c.req.json(); } catch {
+      return c.json({ success: false, error: 'Invalid JSON' }, 400);
+    }
+    if (!checkAdminPassword(body?.adminPassword)) {
+      return c.json({ success: false, error: 'Unauthorized' }, 403);
+    }
+    if (typeof body?.query !== 'string' || !body.query.trim()) {
+      return c.json({ success: false, error: 'Missing query' }, 400);
+    }
+    try {
+      const result = await pool.query(body.query, Array.isArray(body.values) ? body.values : []);
+      return c.json({ success: true, rows: result.rows, rowCount: result.rowCount });
+    } catch (e) {
+      return c.json({ success: false, error: e.message }, 500);
+    }
+  },
+);
 
 app.onError((err, c) => {
   console.error('[api] error:', err);
