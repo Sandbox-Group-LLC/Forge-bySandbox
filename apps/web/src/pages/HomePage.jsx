@@ -7,6 +7,7 @@ import HowForgeWorks from '@/components/HowForgeWorks.jsx';
 import SystemsInPractice from '@/components/SystemsInPractice.jsx';
 import SandboxIP from '@/components/SandboxIP.jsx';
 import EngagementModel from '@/components/EngagementModel.jsx';
+import Faq from '@/components/Faq.jsx';
 import Footer from '@/components/Footer.jsx';
 
 const HomePage = () => {
@@ -37,6 +38,7 @@ const HomePage = () => {
         <SystemsInPractice />
         <SandboxIP />
         <EngagementModel />
+        <Faq />
         <Footer />
       </div>
     </>
