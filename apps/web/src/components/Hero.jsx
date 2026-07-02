@@ -37,7 +37,7 @@ const Hero = () => {
             Bespoke operational software for growth teams.
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl text-neutral-light mb-10 md:mb-12 max-w-3xl mx-auto font-medium leading-relaxed px-2 sm:px-0">
-            Forge builds production-ready tooling that automates workflows and extends CRM ecosystems — delivered with clarity and ownership.
+            Forge builds production-ready intelligence platforms, GTM systems, and workflow automation — the same disciplines behind Sandbox's own product portfolio, delivered with clarity and ownership.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full px-4 sm:px-0">
             <Button

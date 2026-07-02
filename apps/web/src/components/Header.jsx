@@ -42,6 +42,7 @@ const Header = () => {
   const navLinks = [
     { id: 'capabilities', label: 'Capabilities' },
     { id: 'how-it-works', label: 'How It Works' },
+    { id: 'sandbox-ip', label: 'Sandbox IP' },
     { id: 'engagement', label: 'Engagement Model' },
   ];
 
@@ -50,9 +51,9 @@ const Header = () => {
       <header className="bg-navy text-white sticky top-0 z-50 shadow-sm">
         <div className="py-4 px-6 max-w-7xl mx-auto flex items-center justify-between relative z-10 bg-navy">
           <Link to="/" className="flex items-center" onClick={() => setIsMobileMenuOpen(false)}>
-            <img 
-              src="https://horizons-cdn.hostinger.com/9346395c-bf88-4008-af33-0f49bacfaaac/3f1a74ca5dee9f2f92c948c95e8a2b3c.png" 
-              alt="FORGE logo" 
+            <img
+              src="/assets/forge-logo.webp"
+              alt="FORGE by Sandbox logo"
               className="h-10 md:h-12 w-auto object-contain"
             />
           </Link>

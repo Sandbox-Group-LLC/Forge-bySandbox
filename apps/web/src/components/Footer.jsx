@@ -6,9 +6,9 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-12">
           <div className="flex justify-center md:justify-start w-full md:w-auto">
-            <img 
-              src="https://horizons-cdn.hostinger.com/9346395c-bf88-4008-af33-0f49bacfaaac/3f1a74ca5dee9f2f92c948c95e8a2b3c.png" 
-              alt="FORGE logo" 
+            <img
+              src="/assets/forge-logo.webp"
+              alt="FORGE by Sandbox logo"
               className="h-10 w-auto object-contain"
             />
           </div>

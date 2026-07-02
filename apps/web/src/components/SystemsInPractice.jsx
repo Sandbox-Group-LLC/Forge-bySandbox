@@ -3,18 +3,18 @@ import { Zap, Calendar, GitBranch } from 'lucide-react';
 
 const systems = [
   {
-    title: 'GTM Infrastructure for Sandbox-GTM',
-    description: 'Internal tooling and workflow automation systems that power campaign orchestration, data synchronization, and operational visibility.',
+    title: 'Intelligence Platforms in Production',
+    description: 'Forge Intelligence and SYSOI run live intelligence workloads — competitive landscape mapping, identity resolution, and engagement scoring — for real B2B teams.',
     icon: Zap,
   },
   {
-    title: 'Event Operations Platforms',
-    description: 'Custom-built check-in systems, attendee lookup tools, and CRM extensions designed for real-time performance in live environments.',
+    title: 'Event GTM at Scale',
+    description: 'Sandbox-GTM manages events, attendees, speakers, sessions, and marketing campaigns end to end, backed by check-in systems built for real-time performance in live environments.',
     icon: Calendar,
   },
   {
-    title: 'Workflow Automation Layers',
-    description: 'Lightweight applications that eliminate manual processes and create reliable data flow across marketing and sales systems.',
+    title: 'AI Workflow Automation',
+    description: 'Pitch Box turns weeks of RFP response work into evidence-based drafts in minutes — the same automation discipline Forge applies to client marketing and sales systems.',
     icon: GitBranch,
   },
 ];
@@ -35,10 +35,7 @@ const SystemsInPractice = () => {
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full mb-8"></div>
           <p className="text-xl text-blue-100/90 leading-relaxed mb-4">
-            Forge builds operational infrastructure that supports the broader Sandbox ecosystem and client growth initiatives.
-          </p>
-          <p className="text-lg text-blue-200/70 font-medium">
-            Examples include:
+            Forge doesn't just build for clients — it builds and operates the Sandbox platform portfolio. Every discipline we offer is proven in production first.
           </p>
         </div>
 

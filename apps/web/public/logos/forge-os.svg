@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" role="img" aria-label="ForgeOS">
+  <rect width="40" height="40" rx="10" fill="#0f192d"/>
+  <path d="M20 8l11 5.5-11 5.5-11-5.5z" fill="#3b82f6"/>
+  <path d="M9 20.5l11 5.5 11-5.5" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>
+  <path d="M9 26.5l11 5.5 11-5.5" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity=".45"/>
+</svg>

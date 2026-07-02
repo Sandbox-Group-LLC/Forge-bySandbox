@@ -24,3 +24,9 @@ User-agent: Applebot-Extended
 Allow: /
 
 Sitemap: https://forge-bysandbox.tech/sitemap.xml
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Bingbot
+Allow: /
