@@ -42,6 +42,7 @@ const Header = () => {
   const navLinks = [
     { id: 'capabilities', label: 'Capabilities' },
     { id: 'how-it-works', label: 'How It Works' },
+    { id: 'sandbox-ip', label: 'Sandbox IP' },
     { id: 'engagement', label: 'Engagement Model' },
   ];
 

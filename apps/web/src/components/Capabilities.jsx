@@ -1,30 +1,42 @@
 import React from 'react';
-import { Plug, LayoutDashboard, Zap, CheckCircle } from 'lucide-react';
+import { Brain, Network, Megaphone, FileText, Plug, Rocket } from 'lucide-react';
 
 const capabilities = [
   {
-    title: 'CRM Extensions & Integrations',
-    description: 'Tools that connect, enrich, and automate CRM operations.',
+    title: 'AI & Competitive Intelligence Systems',
+    description: 'Intelligence layers that map markets, surface undefended positions, and compound insight into automated content operations.',
+    success: 'The discipline behind Forge Intelligence.',
+    icon: Brain,
+  },
+  {
+    title: 'Event Intelligence & Data Unification',
+    description: 'Systems that resolve identities across fragmented platforms and turn engagement into auditable, sales-ready insight.',
+    success: 'The discipline behind SYSOI.',
+    icon: Network,
+  },
+  {
+    title: 'Event GTM & Campaign Operations',
+    description: 'End-to-end platforms for events, attendees, speakers, sessions, and campaigns — with analytics and automation built in.',
+    success: 'The discipline behind Sandbox-GTM.',
+    icon: Megaphone,
+  },
+  {
+    title: 'AI Proposal & Document Automation',
+    description: 'Evidence-based drafting systems that parse complex documents and generate traceable, source-backed responses.',
+    success: 'The discipline behind Pitch Box.',
+    icon: FileText,
+  },
+  {
+    title: 'CRM Extensions & Workflow Automation',
+    description: 'Tools that connect, enrich, and automate CRM operations — eliminating manual work and syncing data across platforms.',
     success: 'Your CRM becomes the operational hub it was meant to be.',
     icon: Plug,
   },
   {
-    title: 'Operational Dashboards & Internal Apps',
-    description: 'Real-time UI for business operations — owner-controlled and maintainable.',
-    success: 'Teams see what matters, make decisions faster.',
-    icon: LayoutDashboard,
-  },
-  {
-    title: 'Workflow Automation Engines',
-    description: 'Systems that eliminate manual work and sync across platforms.',
-    success: 'Repetitive work disappears. Your team focuses on strategy.',
-    icon: Zap,
-  },
-  {
-    title: 'Event & Check-In Systems',
-    description: 'Lightweight operational tooling that scales with live experiences.',
-    success: 'Seamless operations at scale, no friction.',
-    icon: CheckCircle,
+    title: 'Rapid Deployment Infrastructure',
+    description: 'Production-grade shipping on ForgeOS, our proprietary web app deployment OS — from architecture to live in days.',
+    success: 'The discipline behind every Forge build.',
+    icon: Rocket,
   },
 ];
 
@@ -45,7 +57,7 @@ const Capabilities = () => {
           <div className="w-24 h-1 bg-blue-500 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {capabilities.map((capability, index) => {
             const Icon = capability.icon;
             return (

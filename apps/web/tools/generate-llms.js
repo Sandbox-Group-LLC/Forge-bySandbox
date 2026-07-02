@@ -127,7 +127,7 @@ function generateLlmsTxt(pages) {
 
 	return `# Forge by Sandbox
 
-> Forge by Sandbox is a product engineering studio that builds bespoke operational software for growth-focused organizations. Forge delivers production-ready CRM extensions, workflow automation engines, operational dashboards, and event check-in systems. Clients receive full ownership of the application, the data, and the infrastructure on delivery.
+> Forge by Sandbox is a product engineering studio that builds bespoke operational software for growth-focused organizations. Forge is the product engine behind Sandbox Group's platform portfolio — Forge Intelligence, SYSOI, Sandbox-GTM, and Pitch Box — and delivers production-ready intelligence platforms, event GTM systems, proposal automation, and CRM extensions. Clients receive full ownership of the application, the data, and the infrastructure on delivery.
 
 ## About
 
@@ -135,10 +135,20 @@ Forge is part of Sandbox Group LLC. Every engagement is scoped, built, and trans
 
 ## Capabilities
 
-- **CRM Extensions & Integrations** — Tools that connect, enrich, and automate CRM operations.
-- **Operational Dashboards & Internal Apps** — Real-time UI for business operations, owner-controlled and maintainable.
-- **Workflow Automation Engines** — Systems that eliminate manual work and sync across platforms.
-- **Event & Check-In Systems** — Lightweight operational tooling for live experiences.
+- **AI & Competitive Intelligence Systems** — Intelligence layers that map markets and compound insight into automated content operations (the discipline behind Forge Intelligence).
+- **Event Intelligence & Data Unification** — Systems that resolve identities across fragmented platforms and turn engagement into sales-ready insight (the discipline behind SYSOI).
+- **Event GTM & Campaign Operations** — End-to-end platforms for events, attendees, speakers, sessions, and campaigns (the discipline behind Sandbox-GTM).
+- **AI Proposal & Document Automation** — Evidence-based drafting systems with traceable, source-backed responses (the discipline behind Pitch Box).
+- **CRM Extensions & Workflow Automation** — Tools that connect, enrich, and automate CRM operations across platforms.
+- **Rapid Deployment Infrastructure** — Production-grade shipping on ForgeOS, Sandbox's proprietary web app deployment OS.
+
+## Sandbox IP
+
+- **Forge Intelligence** (https://forgeintelligence.ai) — Brand intelligence that compounds: competitive intelligence and automated content systems for mid-market B2B.
+- **SYSOI** (https://sysoi.ai) — The system of intelligence for B2B events: unified attendee data, identity resolution, and sales-ready insight.
+- **Sandbox-GTM** (https://sandbox-gtm.com) — The event GTM platform: events, attendees, speakers, sessions, and campaigns with analytics and automation.
+- **Pitch Box** (https://pitchbox-landing.forge-os.ai) — AI-powered RFP response system with evidence-based drafting.
+- **ForgeOS** — Sandbox's proprietary web app deployment OS (internal platform).
 
 ## Engagement Flow
 
